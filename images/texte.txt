@@ -1,0 +1,25 @@
+Restaurant : AfriBouff'
+Slogan : Des plats africains pour tous
+--> Braisé
+	poulet braisé (14€)
+	capitaine braisé (13€)
+	pintade braisé (18€)
+
+--> Sauces et plats
+	sauce arachide accompagné de riz (mafé) / 14€
+	tchêp avec viande de poulet / 16€
+	Eru  (Cameroun)	 / 19€
+
+--> Accompagnements 
+	alloco
+	riz
+	patates douces
+
+--> Cocktail
+	cocktail punch fruits (ananas,orange,pamplemousse,citrons verts...) / 6€
+	cocktail gnamakoudji (gnamakoudi,feuille de menthe...) / 4.5€
+	cocktail spécial ("gnamakoudji",bissap,ananas) / 7.5€
+	
+
+	
+	

@@ -1,0 +1,274 @@
+/*----------Définition des styles et polices personnalisées----------*/
+
+@font-face 
+{
+    font-family: "PlayfairDisplay";
+    src: url("../polices/PlayfairDisplay/static/PlayfairDisplay-Regular.ttf");
+}
+
+@font-face 
+{
+    font-family: "YeonSung";
+    src: url("../polices/YeonSung/YeonSung-Regular.ttf");
+}
+
+@font-face
+{
+    font-family : "Kenia";
+    src : url("../polices/Kenia/Kenia-Regular.ttf");
+}
+
+body 
+{
+    background-color: burlywood;
+}
+
+html
+{
+    scroll-behavior: smooth;
+}
+
+#main_wrapper 
+{
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/*----------Mise en page du header----------*/
+
+header 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+div.slider
+{
+    width: 1400px;
+    overflow: hidden;
+}
+
+div.slides
+{
+   display: flex;
+   flex-direction: row;
+   width: calc(700px*4);
+   animation: glisse 18s infinite ease;
+}
+
+div .slide
+{
+    opacity: 0.7;    
+}
+
+div img
+{
+    width: 700px;
+    height: 350px;
+}
+
+div.titre_slogan 
+{
+    position: absolute;
+    z-index: 2;
+    background-color: white;
+    text-align: center;
+    font-family: 'PlayfairDisplay', 'sans-serif';
+    box-shadow: -12px 12px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    width: 30%;
+}
+
+div.titre_slogan h2 
+{
+    font-size: 200%;
+    margin: 3% auto;
+}
+
+div.titre_slogan p 
+{
+    font-size: 125%;
+    margin: 3% auto;
+}
+
+@keyframes glisse
+{
+    0%{transform: translateX(0px);}
+    12.5%{transform: translateX(0px);}
+    25%{transform: translateX(-700px);}
+    37.5%{transform: translateX(-700px);}
+    50%{transform: translateX(-1400px);}
+    62.5%{transform: translateX(-1400px);}
+    75%{transform: translateX(-700px);}
+    87.5%{transform: translateX(-700px);}
+    100%{transform : translateX(0);}
+}
+
+/*-----------Menu----------*/
+
+nav
+{
+    display: flex;
+    justify-content: center;
+}
+
+nav ul
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    width: calc(350px*4);
+}
+
+nav li
+{
+    list-style-type: none;
+    width: 100%;
+    height: 350px;
+    transition: 0.3s all;
+}
+
+nav li:hover
+{
+    transform: scale(1.1);
+    transition: 0.3s all;
+}
+
+nav a
+{
+    text-decoration: none;
+    font-size: 220%;
+    background-color: rgba(255,255,255,0.4);
+    color:black;
+}
+
+.nav-item
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Kenia';
+    flex: 1;
+}
+
+.grillade-banner
+{
+    background: url("../images/grillade-banner.jpg") no-repeat 100%;
+    background-size: cover;
+}
+
+.sauce-banner
+{
+    background: url("../images/sauces-banner.jpg") no-repeat 100%;
+    background-size: cover;
+}
+
+.accomp-banner
+{
+    background: url("../images/accomp-banner.jpg") no-repeat 100%;
+    background-size: cover;
+}
+
+.cocktail-banner
+{
+    background: url("../images/boisson-banner.jpg") no-repeat 100%;
+    background-size: cover;
+}
+
+/*---------- Section des plats ----------*/
+
+section
+{
+    padding: 0.001% 0% 0.001% 0%;
+}
+
+div.item
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: white;
+    margin: 2%;
+    width: 60%;
+    transition: 0.4s all;
+}
+
+div.item:hover
+{
+    box-shadow: -12px 12px 2px 1px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+    transition: 0.4s all;
+}
+
+div.item img
+{
+    width: 25%;
+    height: 180px;
+}
+
+div.item-infos
+{
+    font-family: PlayfairDisplay;
+    padding: 0% 6% 0% 3%;
+    margin: 0;
+}
+
+div.item-infos h3
+{
+    font-weight: bold;
+    font-size: 150%;
+    margin-bottom: 0px;
+}
+
+div.item-infos p
+{
+    font-size: 120%;
+}
+
+div.item-infos p + p
+{
+    font-weight: bold;
+    font-size: 120%;
+}
+/*--------- Scroll behavior ----------*/
+.sticky
+{
+    position: fixed;
+    right: 10%;
+    top: 26vh;
+    width: 20%;
+}
+
+.sticky ul
+{
+    flex-direction: column;
+    box-shadow: -12px 12px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.sticky + main
+{
+    padding-top: 50px;
+}
+
+.sticky li
+{
+    margin: 2%;
+}
+
+/*----------Footer----------*/
+footer p
+{
+    text-align: center;
+    font-size: 120%;
+    border: 2px red groove;
+    margin: 0;
+    padding: 0;
+}
