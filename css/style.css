@@ -23,16 +23,16 @@ body
     background-color: burlywood;
 }
 
-html
-{
-    scroll-behavior: smooth;
-}
-
 #main_wrapper 
 {
     width: 90%;
     margin: auto;
     overflow: hidden;
+}
+
+html
+{
+    scroll-behavior: smooth;
 }
 
 /*----------Mise en page du header----------*/
@@ -155,7 +155,6 @@ nav a
     justify-content: center;
     align-items: center;
     font-family: 'Kenia';
-    flex: 1;
 }
 
 .grillade-banner
@@ -239,6 +238,7 @@ div.item-infos p + p
     font-size: 120%;
 }
 /*--------- Scroll behavior ----------*/
+
 .sticky
 {
     position: fixed;
@@ -253,6 +253,11 @@ div.item-infos p + p
     box-shadow: -12px 12px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
+.sticky .nav-item
+{
+    height: auto;
+}
+
 .sticky + main
 {
     padding-top: 50px;
@@ -263,6 +268,7 @@ div.item-infos p + p
     margin: 2%;
 }
 
+
 /*----------Footer----------*/
 footer p
 {
@@ -271,4 +277,203 @@ footer p
     border: 2px red groove;
     margin: 0;
     padding: 0;
+}
+
+/*----------------------------- Autres tailles écrans (Essai sur Samsung S20+)-----------------------------*/
+    /*Gestion des téléphones*/
+@media screen and (max-width : 480px) 
+{
+    #main_wrapper
+    {
+        width: 100%;
+        margin: auto;
+        overflow: hidden;
+    }
+    /*----------Mise en page du header----------*/
+    div.slider
+    {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    div.slides
+    {
+       max-width: calc(480px*4);
+        width: calc(100%*4);
+        overflow: hidden;
+    }
+    
+    div .slide img
+    {
+        max-width: 100%;
+        height : 350px;
+    }
+    
+    div.titre_slogan 
+    {
+        width: 60%;
+    }
+    
+    div.titre_slogan h2 
+    {
+        font-size: 130%;
+    }
+
+    div.titre_slogan p 
+    {
+        font-size: 90%;
+    }
+    @keyframes glisse
+    {
+        0%{transform: translateX(0%);}
+        12.5%{transform: translateX(0%);}
+        25%{transform: translateX(-25%);}
+        37.5%{transform: translateX(-25%);}
+        50%{transform: translateX(-50%);}
+        62.5%{transform: translateX(-50%);}
+        75%{transform: translateX(-25%);}
+        87.5%{transform: translateX(-25%);}
+        100%{transform : translateX(-0%);}
+    }
+    
+    /*-----------Menu----------*/
+    nav
+    {
+        flex-wrap: wrap;
+    }
+    
+    nav ul
+    {
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 400px;
+    }
+
+    nav li
+    {
+        width: 50%;
+        height: 200px;
+    }
+    
+   
+    nav li:hover
+    {
+        transform: none;
+    }
+
+    nav a
+    {
+        font-size: 90%;
+        background-color: rgba(255,255,255,0.8);
+    }
+    
+    /*---------- Section des plats ----------*/
+
+    section
+    {
+        padding: 0.001% 0% 0.001% 0%;
+    }
+
+    div.item
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: white;
+        margin: 2%;
+        width: 80%;
+        height: 100px;
+    }
+
+    div.item:hover
+    {
+        transform: none;
+    }
+
+    div.item img
+    {
+        width: 100px;
+        height: 100px;
+    }
+
+    div.item-infos
+    {
+        font-family: PlayfairDisplay;
+        padding: 2px;
+        margin: 0;
+    }
+
+    div.item-infos h3
+    {
+        font-weight: bold;
+        font-size: 90%;
+        margin-bottom: 0px;
+    }
+
+    div.item-infos p
+    {
+        font-size: 65%;
+    }
+
+    div.item-infos p + p
+    {
+        font-weight: bold;
+        font-size: 65%;
+        margin-top: 0px;
+    }
+    
+    /*--------- Scroll behavior ----------*/
+    .sticky
+    {
+        position: fixed;
+        right: 1px;
+        top: 26vh;
+        width: 20%;
+        height: 20px;
+    }
+
+    .sticky ul
+    {
+        flex-direction: column;
+        box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2);
+    }
+    
+    .sticky .nav-item
+    {
+        height: 30px;    
+    }
+    
+    .sticky nav li
+    {
+        list-style-type: none;
+        width: 60%;
+        height: 20px;
+        transition: 0.3s all;
+    }   
+
+    
+    .sticky nav a
+    {
+        font-size: 6px;
+    }
+    
+    .sticky + main
+    {
+        padding-top: 50px;
+    }
+
+    .sticky li
+    {
+        margin: 3px;
+    }
+
+    /*----------Footer----------*/
+    footer p
+    {
+        font-size: 60%;
+    }
+    
+    
+
 }
